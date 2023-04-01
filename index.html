@@ -61,6 +61,7 @@
                 [38.8339,-104.8214],
                 [39.0710,-106.9890],
                 [38.8409, -105.0423]];
+	var poly = L.polygon(polygonPoints)
 	
 	var Esri_WorldTerrain = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer/tile/{z}/{y}/{x}', {
 	attribution: 'Tiles &copy; Esri &mdash; Source: USGS, Esri, TANA, DeLorme, and NPS'
@@ -83,7 +84,7 @@
 		"Locs": Locs,
 		"Capital":Denver,
 		"ItoP": Rect,
-		"Polygon":polygonPoints
+		"Polygon":poly
 	};
 	L.control.layers(basemaps,overlays).addTo(myMap);
 	
